@@ -3,11 +3,21 @@
 Servo sophiaServo;
 Servo snakeServo;
 
+const int trigPin = 5;
+const int echoPin = 6;
+
+long duration;
+int distance;
 
 void setup() {
   // put your setup code here, to run once:
   sophiaServo.attach(11);
   snakeServo.attach(10);
+
+  
+  pinMode (trigPin, OUTPUT) ;
+  pinMode (echoPin, INPUT) ;
+  Serial.begin(9600) ;
 }
 
 void loop() {
@@ -22,7 +32,7 @@ void loop() {
     delay(10);
   } 
   for (int i = 0; i < 175; i++){
-  snakeServo.write(i);
+  snakeServo.write(i);  
   delay(10);
   }
 
@@ -30,4 +40,7 @@ void loop() {
     snakeServo.write(i);
     delay(10);
   }
- }
+
+  digitalWrite
+
+}
